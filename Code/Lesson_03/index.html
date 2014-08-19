@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<!--
+	Here we cover diffferent kinds of lists in HTML
+    
+    <ol></ol> - Ordered lists
+    <ul></ul> - Unordered list
+    <li></li> - List item
+    <dl></dl> - Definition list, can be used as a glossary
+    <dt></dt> - Definition term, the term part of an glossary
+    <dd></dd> - Definition define, the definition of a term in our glossary
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lists in HTML</title>
+	</head>
+
+	<body>
+    	<!-- This is a Bullet List -->
+    	<p>Dantes Divine Comedy books</p>
+        <ul> <!-- Here we create the head of the list and now we can will it with data -->
+        	<li>The Inferno</li> <!-- This is a list element where we cna put text, a link or a image, both of which we will cover later. -->
+            <li>The Purgatory</li>
+            <li>The Paradiso</li>
+        </ul>
+        
+        <!-- This is a Numbered List -->
+        <p>Installing a new operating system</p>
+        <ol>
+        	<li>Insert the DVD into the DVD drive</li>
+            <li>Choose Run</li>
+            <li>Run the setup.exe</li>
+            <li>Follow the instructions given by the installer</li>
+            <li>Reboot your computer after all the files are installed</li>
+            <li>Cross your fingers and hope your computer doesn't catch fire.</li>
+        </ol>
+        
+        <!-- Customizing Ordered List -->
+        <h1>The days of the week</h1>
+        <ol style="list-style-type: upper-roman"> <!-- This style command let's us change the visual display of the list from regular numbers to upper case roman numerals -->
+        	<li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+            <li>Thursday</li>
+            <li>Friday</li>
+            <li>Saturday</li>
+            <li>Sunday</li>
+        </ol>
+        
+        <p>The last six months of the year, and beginning of the next:</p>
+        <ol style="list-style-type: upper-roman" start="7">
+        	<li>July</li>
+            <li>August</li>
+            <li>September</li>
+            <li>October</li>
+            <li>November</li>
+            <li>December</li>
+            <li style="list-style-type:lower-roman">January</li> <!-- We can style list items if we want to using the style command -->
+        </ol>
+        
+        <!-- Customizing Unordered List -->
+        <ul style="list-style-type: disc"> <!-- Using discs to point out the different entries in the list-->
+        	<li>DAT - Digital Audio Tapes</li>
+            <li>CD - Compact Disk</li>
+            <li>Cassettes</li>
+        </ul>
+        
+        <ul style="list-style-type: square"> <!-- Using squares -->
+        	<li>DAT - Digital Audio Tapes</li>
+            <li>CD - Compact Disk</li>
+            <li>Cassettes</li>
+        </ul>
+        
+        <ul style="list-style-type: circle"> <!-- Using circles -->
+        	<li>DAT - Digital Audio Tapes</li>
+            <li>CD - Compact Disk</li>
+            <li>Cassettes</li>
+        </ul>
+        
+        <!--
+        	You can also use images to display different entries in your lists susing
+            style="list-style-image:url(/imaage.gif)"
+        -->
+        
+        <!-- Glossary List -->
+        <dl>
+        	<dt>Brasil</dt>
+	            <dd>Annual. Can grow four feet high; the scent of its tiny white flowers is heavenly</dd>
+            <dt>Oregon</dt>
+            	<dd>Perennial. Seeds out underground runners and is dificult o get rid of once established.</dd>
+            <dt>Coriander</dt>
+            	<dd>Annual. Also cakked cukabtri, coriander likes cooler wheather of spring and fall.</dd>
+        </dl>
+        
+        <!-- Nesting lists -->
+        <ol>
+        	<li>WWW</li>
+            <li>Organizations</li>
+            <li>Beginning HTML</li>
+            	<li>
+                	<ul>
+                    	<li>What is HTML?</li>
+                        <li>How to write HTML</li>
+                        <li>Document Structure</li>
+                        <li>Headings</li>
+                        <li>Paragraph</li>
+                        <li>Comments</li>
+                    </ul>
+                </li>
+                <li>Links</li>
+                <li>More HTML</li>
+        </ol>
+        
+	</body>
+</html>
