@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+
+<!--
+	This lesson will cover formating text with both HTML and start looking
+     at CSS, we will also cover the use of quotes and special characters
+    
+    CSS is short for Cascade Style Sheet, and it helps us
+    to easier format text and creates a reuseable document
+    we can use on multiple web pages.
+    
+    Different HTML style tags
+    <b></b> - Bold text
+    <i></i> - Italic text
+    <tt></tt> - Monospaced typewriter font (Removed from HTML5)
+    <u></u> - Underline text (Removed from HTML5)
+    <s></s> - Strikethrough text (Removed from HTML5)
+    <big></big> - Bigger print than the surrounding text (Removed form HTML5)
+    <small></small> - Smaller print than the surrounding text
+    <sub></sub> - Subscript
+    <sup></sup> - Superscipt
+    
+    i.e: we can specify the fonts we want our text to have,
+    the size of the text, color of the text and if we how
+    we want it aligned (left, center, right). We can also
+    control different elements of HTML using a CSS. 
+    
+    IMPORTANT:
+    	some textbased browsers such as Lynx and some mobile browsers can't render Bold, Italic or any kind of styled text.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML &amp; CSS</title>
+	</head>
+
+	<body>
+    
+    	<!-- In this list we use HTML-tags to style and format our text -->
+    	<p>Styled text using HTML tags</p>
+        <ul>
+        	<li><b>Bold text</b></li>
+            <li><i>Italic text</i></li>
+            <li><tt>Monospaced typewriter font</tt></li>
+            <li><u>Underlined text</u></li>
+            <li><s>Strikethrough text</s></li>
+            <li>some text here <big>bigger text here</big> regular text again</li>
+            <li>some text here <small>smaller text here</small> reguar text again</li>
+            <li>here is some <sub>subscript text</sub> and it's gone</li>
+            <li>here is some <sup>superscript text</sup> and it's gone</li>
+        </ul>
+        
+        <!-- Here we access CSS commands using style="" -->
+        <p>CSS style commands in the HTML tags</p>
+        <ul>
+        	<!-- When ever we call for the 'style' we access CSS commands and can use it to customize the look of our text -->
+            <li><p>Here is some <span style="font-weight: bold">Bold text</span>.</p></li>
+            <li><p>Here is some <span style="font-weight: bolder">Bolder text</span>.</p></li>
+            <li><p>Here is some <span style="font-weight: lighter">Lighter text</span>.</p></li>
+            <li><p>Here is some <span style="font-weight: 700">Even bolder text</span>.</p></li>
+            <li><p>Here is some <span style="font-family: monospace">Monospace text</span>.</p></li>
+            <li><p>Here is some <span style="font-variant: small-caps">Small caps text</span>.</p></li>
+            <li><p>Here is some <span style="font-style: italic">Italic text</span>.</p></li>
+            <li><p>Here is some <span style="font-style: oblique">Oblique text</span>.</p></li>
+            <!-- Italic and Oblique text looks very similar to eachother, can be depending on browser -->
+        </ul>
+        
+        <!-- Preformated text | everything writen between the <pre></pre> tags will be printed as is and won't be formated by the browser -->
+        <p>Pre-tag is a good use for ASCII art</p>
+        <pre>
+    (   )
+Moo (o o)
+     \ /-----\
+     | |   | \
+     | |   || *
+     | |   ||
+           
+        Muh perfect ASCII-cow!
+        
+                            /|      __  
+                           / |   ,-~ /  
+                          Y :|  //  /    
+                          | jj /( .^  
+                          >-"~"-v"  
+                         /       Y    
+                        jo  o    |  
+                       ( ~T~     j   
+                        >._-' _./   
+                       /   "~"  |    
+                      Y     _,  |      
+                     /| ;-"~ _  l    
+                    / l/ ,-"~    \  
+                    \//\/      .- \  
+                     Y        /    Y*  
+                     l       I     ! 
+                     ]\      _\    /"\ 
+                    (" ~----( ~   Y.  )   
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Bunnies because I like them
+        </pre>
+        
+        <!-- <hr> tag and its attributes, hr-tags can be used to create a line breaker between entries. It has been rwmoved from HTML5 but can be used via CSS -->
+        <h2>2 Pixel line</h2>
+        <hr size="2"/>
+        <h2>4 Pixel line</h2>
+        <hr size="4"/>
+        <h2>8 Pixel line</h2>
+        <hr size="8"/>
+        <h2>16 Pixel line</h2>
+        <hr size="16"/>
+        <!-- The width of the hr-tag can be adjusted aswell as the size -->
+        <h2>100%</h2>
+        <hr/>
+        <h2>75%</h2>
+        <hr width="75%"/>
+        <h2>50%</h2>
+        <hr width="50%"/>
+        <h2>25%</h2>
+        <hr width="25%"/>
+        <h2>10%</h2>
+        <hr width="10%" style="color:#06C"/>
+        <!-- Example using hr-tag without shading, with different sizes and center alignment -->
+        <br /> <!-- This is a break line tag, and it works like a "Enter" to start on a new line to your will -->
+        <hr align="center" size="4" width="200" noshade="noshade" />
+        <hr align="center" size="4" width="300" noshade="noshade" />
+        <hr align="center" size="4" width="400" noshade="noshade" />
+        <h1 align="center">This is some wierd stuff dude</h1>
+        <hr align="center" size="4" width="400" noshade="noshade" />
+        <hr align="center" size="4" width="300" noshade="noshade" />
+        <hr align="center" size="4" width="200" noshade="noshade" />
+        <h2 align="center">And I don't know where it ends</h2>
+        
+        <!-- <br /> break line tag, and it works like a "Enter" to start on a new line to your will -->
+        <p>This text is no spearated 
+        even though I have pressed "Enter" in the code</p>
+        <p>This text is spearated<br />becaue I used a break line tag.</p>
+        
+        <!-- Addresses <address> - This is a tag used for signature like entities and is mostly placed at the bottom of a page. -->
+        <hr />
+        <address>
+        	Kevin Berglund, <a href="mailto:kevin@kevinberglund.com">kevin@kevinberglund.com</a><br />
+            This is just some text I added to make it look better<br />
+            - Gadolph Schmitler
+        </address>
+        <hr />
+        
+        <!-- 
+       		Quotations, we have some different tags to use here
+            <blockquote> - Used to indented a lot of text within a web page
+            <cite> - Used to highlight a small qute
+        -->
+        <blockquote> <!-- The blockquote is usally used inside text to indicate that it's a quote from another source and is different from the  -->
+        	I'm not an evil man,<br />
+            But shit like this,<br />
+            Can drive a man insane.
+            -- Someguy on the subway
+        </blockquote>
+        
+        <cite>This is a quote! - Freddy Krueger</cite> <!-- Single line quote -->
+        
+        <!--
+        	Special characters - HTML are ASCII files and doesn't contain characters like ! or @ but only
+            the characters printed on your keyboard, if you have to hold down "Shift" it doesn't exist
+            in the regular ASCiI table. There is a way around it
+        -->
+        <p>All the special characters start with a ampersand (&) and end with and semicolon (;) (Remove parentheses to use)</p>
+        <ul>
+        	<li>At sign - &(#64);</li>
+            <li>Copyright - &(copy);</li>
+            <li>R&eacute;sum&eacute; - Resume correctly written</li>
+        </ul>
+        
+        <!-- Text alignment, we can align text like any kind of text document to align the text right, left or center -->
+        <h1 align="center">Here is some center text</h1>
+        <p align="center">with some subtext</p>
+        
+        <h1 align="left">Do we do stuff?</h1>
+        <h2 align="right"><a href="about.html">Yes we do!</a></h2>
+        <h2 align="right"><a href="stuffwedo.html">Things we do</a></h2>
+        <h2 align="right"><a href="contact.html">How to contact us</a></h2>
+        
+        <!-- Fonts can also be changed using style commands -->
+        <p style="font-family:'Courier New', monospace">This text will be displayed in either Courier New, Courier or Monospace</p>
+        <p style="font-family:Verdana, Geneva, sans-serif">This text will be displayed in either Verdana, geneva or Sans-Serif</p>
+        <p style="font-family:Georgia">This text will be displayed as Georgia or the browsers default font if Georgia isn't installed</p>
+        <p>This text is normal sized, <span style="font-size:200%">This text is twice as big</span></p>
+        <p style="font-size:12px">This text is 12 pixels tall</p>
+        <!-- NOTE: 12px and 100% are valid in CSS documents but 12 px and 100 % are not! -->
+        
+	</body>
+</html>

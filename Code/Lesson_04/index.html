@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<!--
+	In this lesson we will cover links in HTML
+    <a></a> is the tag that is used for linking.
+    It can either be a link to a image, a file or a web page
+    i.e: <a href="link_to_thing">Describing text for the link</a>
+    
+    Way to write links propperly is i.e: 
+    	<p><a>Text</a></p> - Yes
+        <p><a>Text</p></a> - No
+        
+    Different ways to link to things
+    	Relative pathnames:
+    		href="file.html" - Link to a file inside the folder
+        	href="folder/file.html" - Link to a file inside a folder contained inside our current folder
+        	href="../file.html" - Link to a file inside a folder one level up		\
+        	href="../../file.html" - Link to a file inside a folder two levels up	| - the two dots (..) represents that we want to move up a folder.
+            
+		Absolute pathnames:
+        	href="/D:/files/html/file.html" - This is a link to a file located on the D: drive inside the files folder and then in the HTML folder
+            Mac: href="Macintosh%20%HD/HTML Files/file.hmtl" - Link to a specific folder on the Mac platform
+            
+		Linking to different parts of an HTML document using Anchors
+        	<a name="Part4">Part 4: Eating with a fork</a> - Creates an Anchor in our HTML document
+            <a href="file.html#Part4">Part 4</a> - A link which takes us to "Part 4: Eating with a fork" section of our page
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Links</title>
+	</head>
+
+	<body>
+		<h1>The twelve Caesars</h1>
+        <p>A list containing the twelve (12) Caesars</p>
+        <ul>
+        	<li>Julius Caesar</li>
+            <li>Augustus Caesar</li>
+            <li>Tiberius Caesar</li>
+            <li>Gladius (Caligula) Caesar</li>
+            <li><a href="Claudius.html">Claudius Caesar</a></li> <!-- Link to our own page about Claudius Caesar -->
+            <li>Nero Caesar</li>
+            <li>Galba Caesar</li>
+            <li>Otho Caesar</li>
+            <li>Vitellius Caesar</li>
+            <li>Vespasian Caesar</li>
+            <li>Titus Caesar</li>
+            <li>Domitian Caesar</li>
+        </ul>
+        
+        <p><i><a href="http://history.boisetate.edu/westciv/julio-cl/">A list containing the twelve (12) Caesars</a></i> page by Dr. Ellis Knox has more information on these emperors</p> <!-- external linkto a page about the twelve Caesars -->
+        
+        <h1>These could be really honest book reviews</h1>
+    	<p>These are some different books that you can read reviews about, not that I read alot of books</p>
+        <!-- A unordered list containing internal linking to web pages we have or haven't created yet -->
+        <ul>
+        	<li><a href="rainbow.html"><i>The Rainbow Returns</i></a> by E. Smith</li>
+            <li><a href="seven.html"><i>Seven Foot Steps to Immeasurable Wealth</i></a> by R. U. Needy</li>
+            <li><a href="food.html"><i>The Food-Lovers Guide to Wight Loss</i></a> by L. Goode</li>
+            <li><a href="silly.html"><i>The Silly Person's Guide to Seriousness</i></a> by A. F. Knot</li>
+        </ul>
+	</body>
+</html>
