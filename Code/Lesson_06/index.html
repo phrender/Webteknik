@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<!--
+	In this lesson we will create a style sheet in the
+    HTML file and one CSS-file and link them together
+    
+    When writing CSS scripts you select a tag and set its properties
+    
+    i.e:
+    	h1
+        {
+        	font-size: x-large;
+            font-weight: bold;
+        }
+        
+        selector
+        {
+        	property_01: value;
+            property_02: value;
+            etc.
+        }
+    IMPORTANT: all commands in CSS must be ended with a semicolor (;) or the command won't be executed
+        
+    When calling CSS inside your HTML file you write
+    <style type="text/css">
+    h1 {font-size: x-large; font-weight: bold;}
+    </style>
+        
+    When calling a CSS class from your HTML file
+    <link rel="stylesheet" href="filename.css" type="text/css" />
+        
+    You can also create specific Ids which overrides the default selector for that tag.
+    i.e:
+    	HTML:	<span id="footer">This is a footer</span> 
+        CSS:	#footer {font-size: small;}
+            
+	Different units of measurement:
+    em - Relative; height of the element's font
+    ex - Relative; height of the x character in element's font
+    px - Relative; pixels
+    in - Absolute; inches
+    cm - Absolute; centimeters
+    mm - Absolute; milimeters
+    pt - Absolute; points
+    pc - Absolute; picas
+    
+    	Absolute - in theory these units respont to real world measurements
+        Relative - based on a more arbitrary unit of measurement
+    
+    
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS - Indepth</title>
+        
+        <!--
+        	Here we put the CSS scripts at in the head of the HMTL file
+            so we know that we can call them swift and easily.
+         -->
+        <style type="text/css">
+		
+			<!-- Here we create templates for two div boxes we can use and reuse later on if we wish -->
+			.outerbox
+			{
+				/* Here we create a border which is solid, 2 pixels wide and has the color green */
+				
+				border-style: solid;
+				border-width: 2px;
+				border-color: #0F0;
+			}
+			
+			.inner
+			{
+				/* Here we create a border which is solid, 2 pixels wide with the color black. We also set the inner bow to be set with 10 pixels in from all sides */
+				border-style: dotted;
+				border-width: 2px;
+				border-color: #000;
+				padding: 10px;
+				margin: 10px;
+			}			
+        </style>
+        
+        <!-- Here we link our HTML and CSS file together -->
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+        <!-- lets create new box to put stuff in -->
+        
+	</head>
+
+<body>
+    	<div class="outerbox">
+        Outer div box
+    		<div class="inner">
+            	Inner div box
+        	</div>
+        </div>
+        <!--
+        	It's not very fun to write CSS inside the HTML file and it doesn't look 
+            very clean so lets move the CSS script to a separate CSS file which will
+            link in to our HTML document. There are numerus advanteges with keeping the CSS
+            spripts in a separate file, its easier to manage, can be reused for multiple
+            pages and it generally looks better.
+            
+            so create a new file called style.css and save it in the same folder as
+            your HTML file.
+            
+            then we add new box which we will centeter on the screen
+            
+        -->
+        <!-- Here we call our class "NewBox" which we have customized in our CSS-file -->
+        <!--
+        <div class="NewBox"> 
+        	Here is some text to fill fill our new box
+        </div>
+        -->
+        <!-- We can also customize the <body> of our web page inside the CSS doc -->
+        <!--
+        <p class="rightBox">There is some text</p>
+        <p class="mainBox">Here is some more text</p>
+        <p class="bottomBox">and some more text</p>
+        -->
+        <!-- Here we customize a offset using relative positioning for a <p> tag -->
+        <!--
+        <p>This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text This is some text</p> <!-- Normal <p> tag -->
+        <!--
+        <p class="offsetBox">Here is some more text Here is some more text Here is some more text Here is some more text Here is some more text Here is some more text Here is some more text </p> <!-- Relative positioning helps allows us to but something anywhere on our page -->
+        
+        <!-- Here we use absolute positioning -->
+        <!--
+        <div class="myBox" id="topLeft">
+        	Top left corner
+        </div>
+        
+        <div class="myBox" id="topRight">
+        	Top right corner
+        </div>        
+        
+        <div class="myBox" id="bottomLeft">
+        	Bottom left corner
+        </div>
+        
+        <div class="myBox" id="bottomRight">
+        	Bottom right corner
+        </div>
+        
+        <!-- Absolute and relative positioning -->
+        
+        <p class="one">
+        	Can i haz textz? - uses relative positioning
+        </p>
+        
+        <p class="two">
+        	Yuo can have of texts - uses absolute positioning
+        </p>
+        
+        <!-- Links customized with CSS -->
+        <p>Customized links: <a href="http://www.nti.se">Nti Gymnasiet</a></p>
+</body>
+</html>

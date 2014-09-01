@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/*
+	A class is defined with a dot (.) infront of it
+	A ID is defined with a number symbol (#) infornt of it
+*/
+
+/*
+	New box with borders, padding and color
+*/
+.NewBox
+{
+	border-style: dotted;
+	border-width: 2px;
+	border-color: #0F0;
+	background-color: #9900FF;
+	padding: 15px;
+	margin: 40px;
+}
+
+
+
+body
+{
+	/*margin: 20px;			/* Decides how many pixels in from the windows boarder we push our box */
+	background-color: #999;	/* Set the color for the border */
+	border-style: solid;	/* The style of the border and how it will be displayed */
+	border-color: #00F;		/* Decides the color of our border */
+	border-width: 3px;		/* Sets how wide our border is */
+	padding: 20px;			/* Decides how many pixels in we push an object from either side inside our box */
+}
+
+.rightBox
+{
+	border-width: 3px;
+	border-style: solid;
+	border-color: #000;
+	padding: 10px;
+	margin: 10px;
+	float: right;	/*  */
+	width: 33%;		/*  */
+}
+
+.mainBox
+{
+	border-width: 3px;
+	border-style: dashed;
+	border-color: #0F0;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+	width: 150px;
+}
+
+.bottomBox
+{
+	clear: both;
+}
+
+
+/* This class contains relative positioning */
+.offsetBox
+{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #00F;
+	padding: 10px;
+	margin: 10px;
+	background-color: #FF0;
+	position: relative;
+	top: -46px;
+	left: 50px;
+	width: 33%;
+}
+
+/*
+	These IDs and this class contains absolute positioning
+*/
+#topLeft
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#topRight
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#bottomLeft
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#bottomRight
+{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.myBox
+{
+	border-style: solid;
+	border-color: #F00;
+	border-width: 3px;
+	padding: 10px;
+	margin: 10px;
+}
+
+/* Absolut and relative positioning */
+.one
+{
+	position: relative;
+	width: 50%;
+	padding: 15px;
+	background-color: #FFFF00;
+}
+
+.two
+{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	padding: 15px;
+	width: 50%;
+	background-color: #06C;
+	color: #FFFFFF;
+}
+
+/* You can customize links as well */
+a:link{color:#00F;}
+a:active{color:#F00;}
+a:visited{color:#F0F;}
+a:nav{font-weight:bold; text-decoration:none;}
+a.nav:hover, a.nav:active{background-color:#FFFF00; color:#F00;}
+a.nav:link, a.nav:visited{color:#0F0;}
