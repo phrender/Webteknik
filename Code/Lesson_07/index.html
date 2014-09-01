@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<!--
+	In this lesson we will look and different kinds of images, how to include them
+    on your web page, using them as links, setting upp assigned links to images
+    with the help of the clients imagemap and provide alternatives for
+    browsers that can't display images.
+    
+    We are going to look at changeing fonts and background colors,
+    how to use our images and when, and tiled images.
+    
+    Imagetypes:
+    	GIF - Graphics Interchange Format, was a popular image format and is now OK for logos
+        icons, line art and simpler images.
+        
+    	JPEG - Joint photographic Experts Group, good for photographic and graphical elements
+        but not so well for separating lines, sharp edges, logos and icons.
+        
+        PNG - Portable Network Graphics, was originaly designed to replaced GIF, no data is lost
+        during compression like in the other formats.
+        
+        <img /> - Standard image tag
+        <img src="" /> - Image tag with a source to an image
+        <img src="" atl="" /> - Image tag with a source and alternative text if the image is not avalible or if the browser can't display the image
+-->
+
+<html>
+	<head>
+    
+    <style type="text/css">
+		h1
+		{
+			/* Here we add a background to the h1 tag */
+			background-image: url(Penguins.jpg);
+			background-repeat:no-repeat;
+			background-position:center;
+			background-position:left;
+			line-height: 50px;
+			padding-left: 50px;
+		}
+    </style>
+    
+		<meta charset="utf-8">
+		<title>Images, Color and Backgrounds</title>
+	</head>
+
+	<body>
+    
+    <!--
+    	 <div><img src="Penguins.jpg" alt="PENGUINS 4 LYFE!" style="width:200px; height:200px;" /></div> <!-- remove comment around to activate picture -->
+        
+		<h1>Welcome to this website</h1>
+        <p>We specialize in <strong>PENGUINS</strong>!!</p>
+        <!-- Normally printed text and image -->
+        <!--<p><img src="bunnie.jpg" align="left"></p>
+        <p>This is a bunny, bunnies are awesome!</p>
+        
+        <!-- This image and text is spaced 50pixels from the previously printed text and image -->
+        <!--
+        <p><img src="bunnie.jpg" vspace="50" hspace="50" align="left" /></p>
+        <p>This is a bunny, bunnies are awesome</p>
+        
+        <!-- Same example as previously, but this time with CSS instead -->
+        <!--
+        <img src="bunnie.jpg" alt="Bunny" style="float:left" />
+        <p>This is a bunny, bunnies are awesome</p>
+        <hr style="float:left" />
+        
+        <img src="bunnie.jpg" alt="Bunny" style="float:left; padding:50px" />
+        <p>This is a bunny, bunnies are awesome</p>
+        -->
+        
+        <!-- Here we will combine images and links -->
+        
+        <a href="http://www.dn.se"><img src="arrow.jpg" alt="Up" /></a> <br />
+        <!-- This is a link with a image inside of it with no text attached -->
+        <a href="index.html"><img src="arrow.jpg" alt="Up" />Go to index</a> <br /> <!-- This is a link with an image inside of it and has text attached -->
+        
+        <!-- 
+        	The <body> tag can be assigned a background image via CSS
+            i.e:
+            	from HTML:
+                	This is how you assign a image
+                	style="background-image: url(imagefilename.format);"
+
+                    there are more options avalible if you have a image
+                    that don't cover the whole screen area and that is
+                    a repear setting you can enable or disable using:
+                    style="background-image: url(imagefilename.format); background-repear: no-repeat;"
+                    
+                    if you want the picture to be fixed or scroll
+                    with the page you use a attachment setting and 
+                    set it to either fixed or scrolling
+                    style="background-image: url(imagefilename.format); background-repeat: no-repeat; background-attachment: fixed"
+        -->
+        
+        <!-- 
+        	Imagemaps
+            	can be used to put links on images in a stylish way.
+            	http://www.image-maps.com/ - Imagemapper
+        -->
+        <!--
+        <img id="Image-Maps-Com-image-maps-2014-08-15-044047" src="imagemap2.gif" border="0" width="344" height="182" orgWidth="344" orgHeight="182" usemap="#image-maps-2014-08-15-044047" alt="" />
+		<map name="image-maps-2014-08-15-044047" id="ImageMapsCom-image-maps-2014-08-15-044047">
+			<area shape="rect" coords="342,180,344,182" alt="Image Map" style="outline:none;" title="Image Map"/>
+			<area  alt="" title="" href="http://en.wikipedia.org/wiki/Africa/" shape="poly" coords="182,97,181,97,181,98,180,98,180,99,180,100,181,100,181,101,182,101,183,101,183,100,184,100,184,99,184,98,183,98,183,97" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="http://en.wikipedia.org/wiki/Asia/" shape="poly" coords="233,54,232,54,232,55,231,55,231,56,231,57,232,57,232,58,233,58,234,58,234,57,235,57,235,56,235,55,234,55,234,54" style="outline:none;" target="_self"     />
+			<area  alt="" title="" href="http://en.wikipedia.org/wiki/Canada/" shape="poly" coords="52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34,52,34" style=	"outline:none;" target="_self"     />
+		</map>
+        -->
+    </body>
+</html>
