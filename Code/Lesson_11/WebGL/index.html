@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    
+    <script type="text/javascript">
+            
+                var gl;
+                
+				function initWebGL(canvas)
+                {
+                    gl = null;
+                    
+                    try
+                    {
+                        gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+						gl.viewportWidth = canvas.width;
+						gl.viewportHeight = canvas.height;
+                    }
+                    
+                    catch (e)
+                    {
+                    }
+                    
+                    if (!gl)
+                    {
+                        alert("Unable to initialize WebGL, check if your browser is WebGL compatible.");
+                    }
+                    
+                    return gl;
+                }
+
+				function drawScene()
+				{
+					gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
+					gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+				}
+				
+                function startWebGL()
+                {
+                    //alert("WebGL contacted");
+                    
+                    var canvas = document.getElementById("WebGlCanvas");
+                    gl = initWebGL(canvas);
+                    
+                    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+					gl.enable(gl.DEPTH_TEST);
+					
+					drawScene();
+                }
+                
+                
+            
+            </script>
+    
+		<meta charset="utf-8">
+		<title>Untitled Document</title>
+	</head>
+
+	<body onLoad="startWebGL();">
+    
+    	<canvas id="WebGlCanvas" width="640" height="480" style="border:thick black dashed">
+        	<p>Yo  mothafukah!</p>
+        </canvas>
+	</body>
+</html>

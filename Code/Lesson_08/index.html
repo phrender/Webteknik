@@ -1,0 +1,312 @@
+﻿<!DOCTYPE HTML>
+
+<!--
+	In this chapter we will look at tables
+    <table>				- Create a table
+    	<tr>			- Create a table row
+        	<th></th>	- Create a table heade, will set the text to bold
+        	<td></td>	- Create a table column and close it
+        </tr>			- Close a table row
+    </table>			- Close a table
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tables</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+        <!--
+        	NOTE:
+        	Some will say that closing tags for tables are unnecessary
+            and you might encounter pages with out closing tag, but
+            it's a good practice to allways close the tags when you're done
+            with them.
+        -->
+        
+	    <table border="1">
+        	<tr>
+            	<th>Name</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Eye color</th>
+	    	</tr>
+                
+            <tr>
+            	<td>Alison</td>
+                <td>5'4"</td>
+                <td>140</td>
+                <td>Blue</td>
+	    	</tr>
+                
+            <tr>
+                <td>Tom</td>
+                <td>6'0"</td>
+                <td>165</td>
+                <td>Hazel</td>
+	    	</tr>
+                
+            <tr>
+                <td>Susan</td>
+                <td>5'1"</td>
+            	<td>97</td>
+            	<td>Brown</td>
+            </tr>
+                
+	    </table>
+            
+	    <h1>Empty cell</h1>
+        <table border="1">
+        	<tr>
+            	<td></td>
+                	<td>10</td>
+                    <td>20</td>
+	    	</tr>
+	    </table>
+            
+        <h1>The <i>Really</i> empty cell</h1>
+        <table border="1">
+        	<tr>
+            	<td><br /></td>
+                <td>10</td>
+                <td>20</td>
+	    	</tr>
+	    </table><br />
+            
+        <!-- Sizing tables, borders and cells -->
+        <table border="2" width="100%">
+        	<tr>
+            	<td>this tables uses 100% of the windows width</td>
+            </tr>
+	    </table>
+        <table border="2" width="75%">
+        	<tr>
+            	<td>This table uses 75% of the windows width</td>
+	    	</tr>
+	    </table>
+        <table border="2" width="50%">
+        	<tr>
+            	<td>This table uses 50% of the windows width</td>
+	    	</tr>
+        </table>
+	    <table border="2" width="25%">
+        	<tr>
+            	<td>This table uses 25% of the windows width</td>
+	    	</tr>
+	    </table><br />
+            
+        <!-- Styles cells -->
+        <table class="tableStyle">
+	    	<tr>
+            	<td class="internalTableStyle">This td have been styles via CSS</td>
+        	</tr>
+        </table><br />
+        
+	    <!--
+        	Cell padding - cell padding defines the amount of space between the cells and the borders of the table
+	    -->
+        <table border="2" bordercolor="#000000" cellpadding="10">
+        	<tr>
+            	<td>These cells are padded</td>
+            </tr>
+            <tr>
+            	<td>Look at this</td>
+            </tr>
+        </table><br />
+        
+	    <!--
+        	Cell spacing - this is similar to cell padding except thet is affects the amount of space between the cells
+        -->
+        <table cellpadding="10" border="4" cellspacing="0">
+        	<tr>
+            	<td>Row 1 | Cell 1</td>
+                <td>Row 1 | Cell 2</td>
+            </tr>
+            <tr>
+            	<td>Row 2 | Cell 1</td>
+                <td>Row 2 | Cell 2</td>
+            </tr>
+        </table><br />
+        
+        <!-- 
+            Column width - sets the width of a column and can be set for the individual columns
+        -->
+        <table border="1" style="width: 80%">
+            <tr>
+                <th width="40%">Name</th>
+                <th width="20%">Height</th>
+                <th width="20%">Weight</th>
+                <th width="20%">Eye color</th>
+            </tr>
+        </table><br />
+
+        <!-- NoWrap - forces the web browser to write all data on one line in the table, but you can add <br /> tags to create a new line -->
+        <table width="50%" summary="Best hitters of all time">
+            <tr>
+                <th>Name</th>
+                <th nowrap="nowrap">Batting Avarage</th>
+                <!--<th style="white-space: normal">Batting Avarage</th> <!-- Works the same way as nowrap="npwrap" works -->
+                <th nowrap="">Homeruns</th>
+                <th>RBI</th>
+            </tr>
+            
+            <tr>
+                <td>Babe Ruth</td>
+                <td>.342</td>
+                <td>712</td>
+                <td>2217</td>
+            </tr>
+
+            <tr>
+                <td>TedWilliams</td>
+                <td>.344</td>
+                <td>521</td>
+                <td>1839</td>
+            </tr>
+        </table>
+
+        <!-- Table and cell color -->
+        <table bgcolor="#FFFFFF" width="50%" summary="Checkerboard" border="2">
+            <tr align="center">
+                <td bgcolor="#FFFFFF"><br /></td>
+                <td><br /></td>
+                <td style="color: #000000"><br /></td>
+            </tr>
+
+            <tr align="center">
+                <td><br /></td>
+                <td style="color: #000000"><br /></td>
+                <td><br /></td>
+            </tr>
+
+            <tr align="center">
+                <td style="color: #000000"><br /></td>
+                <td><br /></td>
+                <td style="color: #000000"><br /></td>
+            </tr>
+        </table><br />
+
+        <!-- Grouping columns -->
+        <table border="1" width="100%" summary="grouping columns">
+            <caption><b>Science and Mathematic class schedultes</b></caption>
+            
+            <colgroup width="20%" align="center" style="background-color: #fcf">
+            </colgroup>
+
+            <colgroup span="2" width="40%" valign="top" style="background-color: #ccf"></colgroup>
+
+            <tr>
+                <th>Class</th>
+                <th>Room</th>
+                <th>Time</th>
+            </tr>
+
+            <tr>
+                <td>Biology</td>
+                <td>Science Wing, Room 102</td>
+                <td>8:00 AM to 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Science</td>
+                <td>Science Wind, Room 110</td>
+                <td>09:50 AM to 11:30 AM</td>
+            </tr>
+
+            <tr>
+                <td>Physics</td>
+                <td>Science Wind, Room 107</td>
+                <td>01:00 PM to 02:45 PM</td>
+            </tr>
+
+            <tr>
+                <td>Geometry</td>
+                <td>Mathematics Wing, Room 236</td>
+                <td>08:00 AM to 09:45 AM</td>
+            </tr>
+
+            <tr>
+                <td>Algebra</td>
+                <td>Mathematics Wing, Room 239</td>
+                <td>09:50 AM to 11:30 AM</td>
+            </tr>
+
+            <tr>
+                <td>Trigonometry</td>
+                <td>Mathematics Wing, Room 245</td>
+                <td>01:00 PM to 02:45 PM</td>
+            </tr>
+
+        </table>
+
+        <br /><br />
+
+        <table border="1" width="100%" summary="grouping columns">
+            <caption><b>Science and Mathematic class schedultes</b></caption>
+            <colgroup width="20%" align="center"></colgroup>
+            <colgroup span="2" width="40%" valign="top"></colgroup>
+            <thead style="color: red">
+
+            <tr>
+                <th>Class</th>
+                <th>Room</th>
+                <th>Time</th>
+            </tr>
+            </thead>
+
+            <tbody style="background-color: yellow">
+
+                <tr>
+                    <td>Biology</td>
+                    <td>Science Wing, Room 102</td>
+                    <td>8:00 AM to 09:45 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Science</td>
+                    <td>Science Wind, Room 110</td>
+                    <td>09:50 AM to 11:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Physics</td>
+                    <td>Science Wind, Room 107</td>
+                    <td>01:00 PM to 02:45 PM</td>
+                </tr>
+
+            </tbody>
+
+            <tbody style="background-color: gray">
+                <tr>
+                    <td>Geometry</td>
+                    <td>Mathematics Wing, Room 236</td>
+                    <td>08:00 AM to 09:45 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Algebra</td>
+                    <td>Mathematics Wing, Room 239</td>
+                    <td>09:50 AM to 11:30 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Trigonometry</td>
+                    <td>Mathematics Wing, Room 245</td>
+                    <td>01:00 PM to 02:45 PM</td>
+                </tr>
+            </tbody>
+
+            <tfoot style="color: blue; align-content: center; text-weight: bold;">
+                <tr>
+                    <td>Class</td>
+                    <td>Room</td>
+                    <td>Time</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </body>
+</html>

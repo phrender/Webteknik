@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Untitled Document</title>
+	</head>
+
+	<body>
+
+		<canvas id="myCanvas" width="200px" height="200px" style="border: black thick solid;">
+        	<p>Ops... It looks like your browser isn't compatible with &lt;Canvas&gt; tag</p>
+        </canvas>
+    
+	    <script>
+        	var drawCanvas = document.getElementById("myCanvas");
+			var myContext = drawCanvas.getContext("2d");
+			var degreeToRad1 = 120 * Math.PI / 180;
+			var degreeToRad2 = 240 * Math.PI / 180;
+			myContext.fillStyle = "red";
+			//myContext.fillRect(30, 30, 50, 50);
+			myContext.beginPath();
+			myContext.arc(100, 50, 50, degreeToRad1, degreeToRad2);
+			myContext.stroke();
+			myContext.closePath();
+			
+			myContext.font = "bold 20pt Comic Sans MS";
+			myContext.fillText("hej vad gör du?", 30, 30, 500);  
+			myContext.stroke();
+			
+			
+        </script>
+    
+
+	</body>
+</html>

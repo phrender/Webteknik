@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+
+<!--
+	In this lesson we will look at multimedia on the web
+	such as Sound, Videos and other forms of media on the web.
+	We are going to look at embeding Flash movies using the <object> tag,
+	convert files to common web formats
+-->
+
+<html>
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<title>Multimedia</title>
+	</head>
+
+	<body>
+	
+    	<p>Youtube embeding</p>
+		<!-- Youtube embeding -->
+		<iframe  width="560px" height="315px" src="http://www.youtube.com/embed/i8hSZGTXTx8" frameborder="0" allowfullscreen></iframe>
+        
+        <!--
+        	Youtube embeding:
+            iframe			- Used to display a web page within our web page (inception)
+            width			- The width of the video clip
+            height			- The height of the video clip
+            src				- Where the video clip is located using its URL
+            frameborder		- How the border is stylead and if we have one
+            allowfullscreen	- If we allow this video to be watched in fullscreen mode
+        -->
+        
+		<br />
+		<br />
+        
+        <p>Viemo embeding</p>
+		<!-- Vimeo embeding -->
+		<iframe src="http://player.vimeo.com/video/9720104" width="500" height="341" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+		<p>
+        
+        
+        
+		<!-- Video description and link to the video and uploader -->
+		<a href="http://vimeo.com/9720104">funny cat</a> from <a href="http://vimeo.com/user3200429">annika austin</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+		
+        <p>HTML5 &lt;video&gt; tag using a local file</p>
+		<!-- HTML 5 video tag with customized width and height -->
+		<video src="video.mp4" controls width="500px" height="400px"></video>
+		<br />
+		
+        <p>Here we use the &lt;video&gt; tag to get data from an example site which doesnt exist<br />http://www.somesite.com/movie.mp4</p>
+		<!-- We can also embed clips using the video tag -->
+		<video src="http://wwww.somesite.com/movie.mp4" width="560" height="315" controls></video>
+		<br />
+        
+        <!--
+        	One of the major drawbacks with the <video> tag is that it has limited support
+            in Internet Explorer 8.0 and Firefox 8.0, another is that browsers have different
+            support for both video containers and video codecs (used to decode and view the video).
+            But we can work around this problem using the <source> tag nestled inside the <video> tag
+            we can provide videos in different formats and the user wont't se what we did behind the scene
+            when we call different versions of the same videos.
+        -->
+        <p>Here we call a video using the MP4 and OGG codecs</p>
+        <video width="320" height="240" style="background-color:#000" preload controls>
+        	<source src="video.mp4" type='video/mp4; codecs="avc1.42E01, mp4a.40.2"'>
+            <source src="video.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        </video>
+        
+        <!-- We can also embed flash movies inside of the <object> tag -->
+        <p>Here we create a &lt;object&gt; compatible with Internet Explorer</p>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-44455540000" width="700" height="420" style="background-color:#666666">
+        	<param name="movie" value="movie.swf" /> <!-- The param tag is used to provide additional information about the content being embeded to the plug-in referenced by the <object> tag -->
+        </object>
+        
+        <p>This embeding of a flash movie will work with Internet Explorer</p>
+        <object type="application/x-shockwave-flash" data="myContent.swf" width="700" height="420">
+        </object>
+        
+        <!-- We can nestle the <object> tags to make it easier for us -->
+        <object classid="clsid:D27CDB6E-AE6D-11cf-44455540000" width="700" height="420">
+        	<param name="movie" value="movie.swf">
+            <object type="application/x-shockwave-flash" data="player/jwplayer.flash.swf" width="700" height="420">
+				<p>You need Flash Player to view this page <br /><a href="http://get.adobe.com/flashplayer/">Get Flash.</a></p>
+            </object>
+        </object>
+		
+        <p>Here we implement the popular JW-player</p>
+        <!--
+        	The JW-Player is very popular and released under the Creative Commons noncommercial license which
+            means that ist free to use as long as you dont use it for any kind of commercial purpose.
+        -->
+        <script type="application/javascript" src="player/jwplayer.js"></script>
+        <script type="text/jscript">
+        	jwplayer.registerObject("myId", "9", "jwplayer.flash.swf");
+        </script>
+        <div>
+        	<object id="myId" classid="clsid:D27CDB6E-AE6D-11cf-44455540000" width="400" height="315">
+            	<param name="movie" value="player/jwplayer.flash.swf" />
+                <param name="flashvars" value="file=video.mp4" />
+                
+                <!-- [if !IE] -->
+                	<object type="application/x-shockwave-flash" data="player/jwplayer.flash.swf" width="400" height="315">
+                    <param name="flashvars" value="file=video.mp4" />
+                <!-- {endif} -->
+                
+			<div>
+            	<!-- Alternativ content -->
+                <p><a href="http://get.adobe.com/flashplayer/">Download Flash</a></p>
+            </div>
+                
+                <!-- [if !IE] -->
+	                </object>
+                <!-- {endif} -->
+            </object>
+        </div>
+        
+        <!--
+        	Using the <audio> tag
+            We can use the audio tag to embed sound clips in our webpage
+            the <audio> tag is similar to the <video> tag, it attemps to
+            use more of native capabilities of the browser to play back
+            the audio file. It also have the same kinds of attributes
+            as the <video> tag except the "width" and "height".
+        -->
+        <br />
+        <p>Audio file playback</p>
+        <audio src="aMUSiC ft Katya - The butterfly effect.mp3" controls style="background-image:url(asdr.jpg); width:500px">
+        	
+        </audio>
+        
+	</body>
+
+</html>

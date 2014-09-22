@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.tableStyle
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000;
+	/*border-collapse: collapse;*/
+	border-collapse: separate;
+}
+
+.internalTableStyle
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #0F0;
+}

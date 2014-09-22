@@ -1,0 +1,34 @@
+﻿
+div
+{
+    margin-bottom: 5px;
+}
+
+label 
+{
+    display: block;
+    float: left;
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input.submit 
+{
+    margin-left: 160px;
+}
+
+.inputStyled
+{
+	border-width: 2px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #999999;
+	font-family:Verdana;
+	font-size: 18px;
+	font: bold;
+	padding: 3px;
+	
+	
+}
