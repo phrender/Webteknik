@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/* Razor1911style v3.0 */
+
+/* Default styles for the page */
+body
+{
+	font-family: Optima, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-color: #999;
+}
+
+a:link
+{
+	color: #055;
+}
+
+a:visited
+{
+	color: #404;
+}
+
+#header
+{
+	padding: 1.25em 0em 0.25em 0em;
+	position: relative;
+	background-color: #404;
+	text-align: center;
+	color: #055;
+}
+
+#header h1, #header h2
+{
+	margin: 0px;
+}
+
+#header h1
+{
+	color: #FFFF00;
+	font-size: 250%;
+}
+
+#header h2
+{
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* Navigation bar */
+#sitenav
+{
+	position: absolute;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	background-color: #055;
+	
+	top: 0px;
+	right: 0px;
+	width: 100%;
+}
+
+#sitenav ol
+{
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+	font-size: 90%;
+}
+
+#sitenav li
+{
+	display: inline;
+	padding-left: 1em;
+	margin-left: 1em;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #000;
+}
+
+#sitenav li:first-child
+{
+	padding-left: 0px;
+	border-left-style: none;
+	margin-left: 0px;
+}
+
+#sitenav li a:link, #sitenav a:visited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#sitenav li a:hover
+{
+	color: #DDDD00;
+}
+
+/* Main content of the page */
+#main
+{
+	padding: 0px 12em 2em 2em;
+	position: relative;
+	background-color: #055;
+}
+
+#content
+{
+	background-color: #FFF;
+	padding: 1em 5em;
+}
+
+#content h3
+{
+	margin-top: 0px;
+}
+
+#content p
+{
+	font-size: 100%;
+	color: #000000;
+	margin: 0px;
+	font-weight: normal;
+	padding: 0.125em 0.25em;
+}
+
+#content img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The websites sidebars */
+#sidebar
+{
+	position: absolute;
+	width: 10em;
+	right: 1em;
+	top: 1px;
+}
+
+#sidebar h3
+{
+	color: #000000;
+	background-color: #404;
+	font-size: 100%;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0.125em 0.25em;
+}
+
+#sidebar ol
+{
+	margin: 0px 0px 1em 0;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #404;
+	border-top: 0px;
+	background-color: #FFFFFF;
+	padding: 0.125em 0.25em;
+}
+
+#sidebar li
+{
+	font-size: 85%;
+	display: block;
+	padding: 0.125em 0px;
+}
+
+#sidebar li a:link, #sidebar a:visited
+{
+	text-decoration: none;
+	color: #404;
+}
+
+#sidebar li a:hover
+{
+	color: #404;
+}
+
+#footer
+{
+	background-color: #404;
+	color: #FFFFFF;
+	padding: 0.5em 5em;
+}
+
+#footer p
+{
+	margin: 0em;
+	font-size: 85%;
+}
+
+#footer p a:link, #footer p a:visited
+{
+	color: #DDDD00;
+}

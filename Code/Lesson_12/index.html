@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<!--
+	In this lesson we will look at more advanced CSS lik layout strategies,
+    Why tables is a bad idea, replacing <table> with CSS-based layout,
+    how to write HTML for CSS based layouts. How to use position content and
+    floatint column to layout a page and what questions you should ask your
+    self before starting on a CSS.
+-->
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+        <link href="Razor1911style.css" rel="stylesheet" type="text/css">
+		<title>Advanced CSS</title>
+	</head>
+
+	<body>
+		
+        <div id="header">
+        	<h1>Razor1911</h1>
+            <h2>The kings of scene drama</h2>
+            <div id="sitenav">
+            	<ol>
+                	<li><a href="index.html">Home</a></li>
+                    <li><a href="about/">About Razor1911</a></li>
+                    <li><a href="gallery/">Gallery</a></li>
+                    <li><a href="donate/">Donate</a></li>
+                    <li><a href="contact/">Contact</a></li>
+                </ol>
+            </div> <!-- sitenav -->
+        </div> <!-- header -->
+        
+        <div id="main">
+        	<div id="content">
+            	<h3>Welcome to Razor1911 website</h3>
+                <img src="rzr-we_have_accidently_borrowed_01.jpg" alt="[Razor1911 scene drama kings]">
+                <p>Razor 1911 (RZR) is a warez and demo group founded in Norway, 1985. According to the US Justice Department, Razor 1911 is the oldest software cracking group that is still active on the internet.</p>
+            </div> <!-- content -->
+            
+            <div id="sidebar">
+            	<h3>Thingys</h3>
+                <ol>
+                	<li><a href="things/">Things</a></li>
+                    <li><a href="things/">Things</a></li>
+                    <li><a href="things/">Things</a></li>
+                    <li><a href="things/">Things</a></li>
+                </ol>
+                
+                <h3>Other demo groups</h3>
+                <ol>
+                	<li><a href="fairlight/">Fairlight</a></li>
+                    <li><a href="asd/">Andromeda Software Development</a></li>
+                    <li><a href="ctrlalttest/">Crtl-Alt-Test</a></li>
+                </ol>
+            </div> <!-- sidebar -->
+            
+            <div id="footer">
+            	<p id="notes">Notes about stuff and things</p>
+                <p id="copyright">Copyright &copy; 2014, Because fuck you that's why!</p>
+            </div> <!-- Footer -->
+            
+        </div> <!-- main -->
+        
+	</body>
+</html>

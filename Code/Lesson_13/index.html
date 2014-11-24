@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<!--
+	In this lesson we will look at JavaScript and how to
+    utilize it on our own web pages.
+    
+    You will learn how the <script> tag works, get an overview
+    of JavaScript and use JavaScript to handle browser events.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript</title>
+        
+        <script language="javascript">
+        	// Script goes here
+        </script>
+        
+	</head>
+
+	<body>
+		<p>Web content goes here</p>
+        
+        <!-- JavaScript can prouce text -->
+        <script language="javascript">
+		
+			// Single line comment
+			/*
+			 * Multi line comment
+			 */
+		
+			// JavaScript can write text strings
+        	document.write("This text is printed via JavaScript!\n");
+			
+			// Can write integers
+			document.write(500 + "\n");
+			
+			// Even pas objects
+			document.write(document);
+			
+			/*
+			 * Common JavaScript operators
+			 * Operator		Example			Description
+			 * 	  +			 5 + 5			 Adds the two values together
+			 *	  +		 "Java" + "hello"	 Combines two string values
+			 *	  -			 5 - 5		 	 Subtracts the two values 
+			 *	  *			 5 * 5			 Multiplies the two values
+			 *	  /			 5 / 5			 Divides the two values
+			 *	  %			26 % 5			 Obtains the Modulus of 26 divided by 5 and returns the remainder which is 1
+			 *	  
+			 *	  ++		 5++			 Increments the value given by 1, 5 + 1 which is 6
+			 *	  --		 5--			 Decrements the value given by 1, 5 - 1 which is 4
+			 */
+			
+        </script>
+        <br />
+        
+        <script type="text/javascript">
+        	var strMessage = "My message";	// Here we create a variable which is a string and holds the value "My message"
+			document.write(strMessage);		// We print the value of strMessage
+        </script>
+        <br />
+        
+        <script type="text/javascript">
+			// We can use if statements and execute diffent commands
+			var strMyString = "red";
+			if (strMyString == "red")
+			{
+				document.write("Color = red");
+			}
+			
+			else
+			{
+				document.write("Color = blue");
+			}
+			
+			/*
+			 * Comparison operators
+			 * Operator			Description
+			 *    ==			 Equal to
+			 *    !=			 Not equal to
+			 *     <			 Less than
+			 *     >			 Greater than
+			 *    <=			 Less or equal to
+			 *    >=			 Greater of equal to
+			 */
+		</script>
+        <br />
+        <br />
+        
+        <script language="javascript">
+			
+			// For loop
+			for (var iCount = 1; iCount < 10; i++) // Here we have a counter and it will run until our iCount variable is equal or greater than 10
+			{
+				document.write("Iteration: " + iCount + "<br />");
+			}
+		
+        	// While loop, runs until a condition is met
+			var color = "blue";
+			while (color == blue) // While the color is blue we run this loop
+			{
+				document.write("Color is still blue");
+				if (Math.random() > 0.5)
+				{
+					color = "not blue";
+					document.write(color);
+				}
+			}
+			
+			// Do while, runs while a codition is met
+			do
+			{
+				// Do things
+			} while(color != "blue")
+			
+        </script>
+        
+    </body>
+</html>
